@@ -10,7 +10,7 @@ test_surface = pygame.Surface((100, 200))
 test_surface.fill((0, 0, 255))
 
 # Rect allows us to control more points rather than just the top left point
-test_rect = pygame.Rect(100, 200, 100, 100)  # Rect(x, y, w, h) where (x,y) is coordinates of top left point
+test_rect = pygame.Rect(100, 200, 100, 101)  # Rect(x, y, w, h) where (x,y) is coordinates of top left point
 
 while True:
     for event in pygame.event.get():
