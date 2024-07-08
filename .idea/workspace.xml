@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be9a09f6-711b-4eb5-97cb-279e3fcaab5e" name="Changes" comment="python file">
+    <list default="true" id="be9a09f6-711b-4eb5-97cb-279e3fcaab5e" name="Changes" comment="added font">
+      <change afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -22,29 +33,75 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sigmadonaldduck/Snake-Game",
-    "accountId": "717424ad-78e1-411d-89db-80f1a2662b65"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sigmadonaldduck&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sigmadonaldduck/Snake-Game&quot;,
+    &quot;accountId&quot;: &quot;717424ad-78e1-411d-89db-80f1a2662b65&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2hKqD6iTXmHdJBgsBlAffJFO1el" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.snake.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.agent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.helper.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.snake.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kshitij/OneDrive/Desktop/CRT_DL/PyCharm/SnakeGame&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="snake" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SnakeGame" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/snake.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.snake" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -69,11 +126,92 @@
       <option name="project" value="LOCAL" />
       <updated>1717392745432</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test_surface is added to the original surface">
+      <option name="closed" value="true" />
+      <created>1717393674636</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717393674636</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added clock.tick  animated test_surface">
+      <option name="closed" value="true" />
+      <created>1717393989126</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717393989126</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added clock.tick  animated test_surface">
+      <option name="closed" value="true" />
+      <created>1717394539361</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717394539361</updated>
+    </task>
+    <task id="LOCAL-00005" summary="used rect object">
+      <option name="closed" value="true" />
+      <created>1717394598028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717394598028</updated>
+    </task>
+    <task id="LOCAL-00006" summary="used test_surface to get rect object and then used it to manipulate the position of test_surface">
+      <option name="closed" value="true" />
+      <created>1717395053511</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717395053511</updated>
+    </task>
+    <task id="LOCAL-00007" summary="renamed snake.py to pycharm_basics.py">
+      <option name="closed" value="true" />
+      <created>1717395565167</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717395565167</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Step 0">
+      <option name="closed" value="true" />
+      <created>1717396327894</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717396327894</updated>
+    </task>
+    <task id="LOCAL-00009" summary="made snakegame for AI">
+      <option name="closed" value="true" />
+      <created>1719963852784</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719963852784</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added font">
+      <option name="closed" value="true" />
+      <created>1719963874987</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719963874987</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="python file" />
-    <option name="LAST_COMMIT_MESSAGE" value="python file" />
+    <MESSAGE value="test_surface is added to the original surface" />
+    <MESSAGE value="added clock.tick  animated test_surface" />
+    <MESSAGE value="used rect object" />
+    <MESSAGE value="used test_surface to get rect object and then used it to manipulate the position of test_surface" />
+    <MESSAGE value="renamed snake.py to pycharm_basics.py" />
+    <MESSAGE value="Step 0" />
+    <MESSAGE value="made snakegame for AI" />
+    <MESSAGE value="added font" />
+    <option name="LAST_COMMIT_MESSAGE" value="added font" />
   </component>
 </project>
