@@ -1,7 +1,7 @@
 import numpy as np
 import pygame
 import random
-from enum import Enum # Used for enumerations
+from enum import Enum  # Used for enumerations
 from collections import namedtuple
 
 pygame.init()
@@ -18,8 +18,13 @@ class Direction(Enum):
 # namedTuple assigns a meaning to every position in a tuple and allow for a more readable and more self documenting code
 Point = namedtuple('Point', 'x, y')
 
+
+def manhatten_distance(point1, point2):
+    return abs(point1.x-point2.x) + abs(point2.y-point1.y)
+
+
 BLOCK_SIZE = 20
-SPEED = 10
+SPEED = 500
 
 
 # we'll edit the play_step method to inculcate things like reset, reward, play(action) -> direction, keep track of
@@ -51,8 +56,8 @@ class SnakeGameAI:
 
     def _place_food(self):  # randomly places the food
         x = random.randint(0, (self.w-BLOCK_SIZE)//BLOCK_SIZE) * BLOCK_SIZE
-        y = random.randint(0, (self.h-BLOCK_SIZE)//BLOCK_SIZE)* BLOCK_SIZE
-        self.food = Point(x,y)
+        y = random.randint(0, (self.h-BLOCK_SIZE)//BLOCK_SIZE) * BLOCK_SIZE
+        self.food = Point(x, y)
         if self.food in self.snake:
             self._place_food()
 
@@ -64,7 +69,6 @@ class SnakeGameAI:
                 pygame.quit()
                 quit()
 
-
         # 2. move
         self._move(action)  # updates the head
         self.snake.insert(0, self.head)
@@ -75,7 +79,8 @@ class SnakeGameAI:
         if self.is_collision() or self.frame_iteration > 100*len(self.snake):
             game_over = True
             reward -= 10
-            return game_over, self.score
+            return reward, game_over, self.score
+
 
         # 4. place new food or just move
         if self.head == self.food:
@@ -96,7 +101,7 @@ class SnakeGameAI:
         if pt is None:
             pt = self.head
         # hits boundary
-        if pt.x > self.w - BLOCK_SIZE or pt.x < 0 or pt.y > self.h - BLOCK_SIZE:
+        if pt.x > self.w - BLOCK_SIZE or pt.x < 0 or pt.y > self.h - BLOCK_SIZE or pt.y < 0:
             return True
         # hits itself
         if pt in self.snake[1:]:
@@ -115,7 +120,7 @@ class SnakeGameAI:
                 eye_offset_x = BLOCK_SIZE // 3
                 eye_offset_y = BLOCK_SIZE // 3
                 pygame.draw.circle(self.display, (0, 0, 0), (pt.x + eye_offset_x, pt.y + eye_offset_y), eye_size)
-                pygame.draw.circle(self.display, (0, 0, 0), (pt.x + eye_offset_x, pt.y +  BLOCK_SIZE - eye_offset_y),
+                pygame.draw.circle(self.display, (0, 0, 0), (pt.x + eye_offset_x, pt.y + BLOCK_SIZE - eye_offset_y),
                                    eye_size)
             else:
                 pygame.draw.rect(self.display, (30, 144, 255), pygame.Rect(pt.x, pt.y, BLOCK_SIZE, BLOCK_SIZE))
@@ -124,19 +129,23 @@ class SnakeGameAI:
         pygame.draw.rect(self.display, (255, 0, 0), pygame.Rect(self.food.x, self.food.y, BLOCK_SIZE, BLOCK_SIZE))
 
         text = font.render("Score: " + str(self.score), True, (255, 255, 255))
-        self.display.blit(text, [0,0])  # putting the text on the display with position at the top left
+        self.display.blit(text, [0, 0])  # putting the text on the display with position at the top left
         pygame.display.flip()  # updates the full display surface to the screen
 
     def _move(self, action):
 
         clock_wise = [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]
         idx = clock_wise.index(self.direction)
+
+        new_dir = self.direction
         if np.array_equal(action, [1, 0, 0]):
             new_dir = clock_wise[idx]
         if np.array_equal(action, [0, 1, 0]):
             new_dir = clock_wise[(idx+1) % 4]
-        if np.array(action, [0, 0, 1]):
+        if np.array_equal(action, [0, 0, 1]):
             new_dir = clock_wise[(idx-1) % 4]
+
+        self.direction = new_dir
 
         x = self.head.x
         y = self.head.y
@@ -151,4 +160,5 @@ class SnakeGameAI:
             y += BLOCK_SIZE
 
         self.head = Point(x, y)
+
 
